@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Login - justWalk</title>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
    
 
     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
@@ -41,18 +41,7 @@
            
           </script>
 
-      <script src="js/index.js"></script>
-      <script>
-          firebase.auth().onAuthStateChanged(function (user)
-          {
-
-            if(user){
-                window.location.href = "loggedIn.html"
-            }
-
-          }
-          );
-      </script>
+      
 
 
  <!-- Optional JavaScript -->
@@ -129,6 +118,19 @@
         </div>
     </section>
 
+
+    <script src="js/index.js"></script>
+      <script>
+          firebase.auth().onAuthStateChanged(function (user)
+          {
+
+            if(user){
+                window.location.href = "loggedIn.html"
+            }
+
+          }
+          );
+      </script>
 
    
 
