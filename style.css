@@ -1,0 +1,549 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+    font-style: italic;
+    font-size: 36px;
+    font-weight: 300;
+}
+
+h6{
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Navigation Bar */
+
+#nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar{
+    background-image: linear-gradient(to right, #F41E1E,#F41E1E);
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+.k{
+    font-size: 30px;
+    font-weight: bold;
+    color: white !important;
+}
+
+.navbar-nav li a{
+    color: white !important;
+    font-weight: bold;
+    float: right;
+    text-align: left;
+}
+
+/* Banner Section */
+
+#banner {
+    background-image: url("images/wave\ \(4\).svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}
+
+.where-title{
+    font-size: 32px;
+    margin-top: 140px;
+    margin-bottom: 40px;
+}
+
+.late-title {
+    font-style: italic;
+    font-size: 26px;
+    font-weight: 600;
+    padding-top: 20%;
+}
+
+.col-md-6 img{
+    margin-top: 100px;
+    margin-left: 20%;
+    width: 65%;
+}
+
+/* How Section */
+
+#how {
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+#how img{
+    margin-top: 4%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
+.how-title {
+    font-style: italic;
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 4%;
+}
+
+/* Pc-laptop Section */
+
+#pc-laptop {
+    margin-bottom: 2%;
+}
+
+#pc-laptop img{
+    margin-top: 20%;
+    display: block;
+    margin-left: 10%;
+    margin-right: auto;
+    width: 70%;
+}
+
+/* Footer Section */
+
+.containerFooter {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+.containerFooter p{
+    font-size: 28px;
+}
+
+/* Bottom right text */
+.bottom-left {
+    position: absolute;
+    bottom: 10px;
+    left: 28px;
+  }
+
+
+
+
+
+
+/* Login class */
+
+#login_banner {
+    background-image: url("images/login_line.svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}
+
+.login_t img{
+    /* padding-top: 5%; */
+    margin-top: 90px;
+    margin-left: 20%;
+    width: 78%;
+}
+
+.login_t p{
+    text-align: center;
+    margin-left: 34%;
+    margin-top: 4%;
+    color: grey;
+}
+
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #F41E1E;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+
+  /* Change styles for span and cancel button on extra small screens */
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+    .cancelbtn {
+      width: 100%;
+    }
+  }
+
+  .login-title{
+    font-size: 32px;
+    margin-top: 60px;
+    margin-bottom: 8px;
+}
+
+@media all and (max-width: 767px) { [class^='col-sm-'] {margin-top: 20px; } }
+
+.gap {
+    margin-top: 8%;
+}
+
+.gapp {
+    margin-top: 2%;
+}
+
+
+
+
+
+/* Sign Up */
+
+.signup_t img{
+    /* padding-top: 5%; */
+    margin-top: 60px;
+    margin-left: 20%;
+    width: 45%;
+}
+
+#signup_banner {
+    background-image: url("images/wave\ signUPP.svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}
+
+
+
+/* Logged in page */
+
+#loggedin_banner {
+    background-image: url("images/wave_logged.svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}
+
+.btn-primary{
+background-color: ghostwhite !important;
+color: black;
+
+}
+
+.btn-danger{
+    background-color: #F41E1E;
+    font-size: 18px;
+    padding:12px;
+}
+
+.logged_t img{
+    /* padding-top: 5%; */
+    margin-top: 35px;
+    margin-left: 20%;
+    width: 78%;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    font-weight: bold;
+    color: white !important;
+}
+
+.btnN{
+    border: 1px solid #E6E6E6;
+    background: none;
+    padding: 20px 10px;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  .btn-new{
+    color: black;
+  }
+ 
+  .btn-new:hover{
+    color: white;
+    opacity: 1;
+  }
+  
+  .btnN::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: #F41E1E;
+    
+    z-index: -1;
+    transition: 0.8s;
+  }
+  .btn-new::before{
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+
+  .btn-new:hover::before{
+    height: 180%;
+  }
+
+
+/* Planned page */
+
+#planned_banner {
+    background-image: url("images/wave\ planned.svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}
+
+.planned_t img{
+    /* padding-top: 5%; */
+    margin-top: 100px;
+    margin-left: 20%;
+    width: 44%;
+}
+
+
+/* Cards used for upcoming walks */
+
+.card-body{
+    background-color: white;
+    margin-bottom: 8%;
+    border-radius: 1px;
+    border-width: 1px;
+    border-style: solid;
+    
+}
+
+/* Got it page */
+
+#gotIt_banner {
+    background-image: url("images/wave\ gotIt.svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}
+
+.gotIt_t img{
+    /* padding-top: 5%; */
+    margin-top: 20px;
+    margin-left: 20%;
+    width: 50%;
+}
+
+
+
+/* Map */
+
+#map {
+    margin-top: 60px;
+    margin-left: 40px;
+    height: 760px; 
+    width: 600px;  
+    border-style: solid;
+    border-width: 2px;
+}
+
+   /* Date and time picker, set colour to red. */
+.gj-picker-md [role=header]{
+    background: #F41E1E !important;
+}
+
+.gj-picker [role=switch] [role=time] {
+    background: #F41E1E !important;
+}
+
+.gj-picker-md [role=footer] button.gj-button-md {
+color: black !important;
+}
+
+.gj-picker-md [role=body] [role=arrow] {
+    background: #F41E1E !important;
+}
+
+.gj-picker-md .arrow-end {
+    border: 16px solid  #F41E1E !important;
+}
+
+.gj-picker-md .arrow-begin, .gj-picker-md [role=body] [role=arrow] {
+    background-color: red !important;
+}
+
+.gj-picker-md table tr td.selected.gj-cursor-pointer div {
+    background: #F41E1E !important;
+}
+
+.gj-picker-md table tr td.today div {
+    color: #F41E1E !important;
+}
+
+/* Modal starts here */
+
+.bg-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 120%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-contents {
+	height: 500px;
+	width: 800px;
+	background-color: white;
+	text-align: center;
+   
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    
+	position: relative;
+	border-radius: 4px;
+}
+
+.close {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	font-size: 42px;
+	color: #333;
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+.change_t img{
+    /* padding-top: 5%; */
+    margin-top: 20px;
+    margin-left: 4%;
+    width: 35%;
+}
+
+#successful_banner {
+    background-image: url("images/wave\ succesful.svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}
+
+.qr_t img{
+    /* padding-top: 5%; */
+    margin-top: 60px;
+    margin-left: 20%;
+    width: 25%;
+}
+
+
+/* Plan Meeting page */
+
+
+#planMeeting_banner {
+    background-image: url("images/planBanner.svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}
+
+.whereMeeting-title{
+    font-size: 32px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.gj-textbox-md {
+    border: 1px solid #ccc !important;
+    box-sizing: border-box !important;
+    padding: 10px !important;
+    border-radius: .25rem !important;
+}
+.gj-datepicker-md [role=right-icon] {
+    padding: 10px !important;
+}
+
+.dropdown{
+    width: 100% !important;
+    border: 1px solid #ccc !important;
+    box-sizing: border-box !important;
+    padding: 10px !important;
+    border-radius: .25rem !important;
+    margin-bottom: 40px !important;
+}
+
+.planMeeting_t img{
+    /* padding-top: 5%; */
+    margin-top: 30%;
+    margin-left: 20%;
+    width: 78%;
+}
+
+/* Confirm page */
+#confirm_banner {
+    background-image: url("images/wave\ \(17\).svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}
+
+.moveDown{
+    margin-top: 40%;
+}
+
+/* Add Friend page */
+
+#addFriend_banner {
+    background-image: url("images/waveAddFriend_alt.svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}

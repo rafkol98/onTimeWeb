@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Manage - justWalk</title>
+    
+    <script src="https://gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+    <script src="https://gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
+    <script src="https://gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+    <script src="https://gstatic.com/firebasejs/6.3.1/firebase-storage.js"></script>
+  </head>
+  <body>
+      <!--Navigation Menu-->
+    <section id="nav_bar">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html">justWalk</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </nav>
+
+    </section>
+
+    
+
+    <section id="loggedin_banner">
+        <div class="container">
+        <div class="gap"></div>
+        <div class="row">
+       
+        <div class="col-md-12">
+            <h2>Welcome back</h2>
+            <p>From here you can see your upcoming walks, add a new friend and plan a meeting with a friend.</p>
+        </div>
+        
+
+        <div class="col-md-6 col-md-pull-6 text-center order-sm-6" >
+            <span class="logged_t"> <img src="images/loggedpic@2x.png" class="img-fluid"> 
+            </span>
+        </div>
+
+             
+        
+        <div class="col-md-6 col-md-push-6 order-sm-1" >
+          
+            
+            <div class="gap"></div>
+            <button type="button" class="btnN btn-new" id="upwalk">Upcoming Walks</button>
+            <button type="button" class="btnN btn-new" id="planMeetingid">Plan a Meeting</button>
+            <button type="button" class="btnN btn-new" id="addFriendid">Add a Friend</button>
+          
+       
+        </div>
+        
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+    <script>
+    document.getElementById("upwalk").onclick = function () {
+    location.href = "planned.html";};
+
+    document.getElementById("planMeetingid").onclick = function () {
+    location.href = "planMeeting.html";};
+
+    document.getElementById("addFriendid").onclick = function () {
+    location.href = "addFriend.html";};
+
+    </script>
+        
+        </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  </body>
+</html>
