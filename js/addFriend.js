@@ -1,27 +1,5 @@
-
-
-// function getHashEmail(email){
-//     var hash = 7;
-//     for(var i=0; i<email.length;i++){
-//         hash = (hash*17) + email.charAt(i);
-//         console.log("hash "+i+ "   value:"+hash);
-//     }
-//     return hash;
-// }
-
-// function cryptoHash(...inputs){
-//     const hash = crypto.createHash('sha256');
-
-//     //joins everything from the input and updates the has.
-//     hash.update(inputs.sort().join(''));
-
-//     //return the result of the hash in a hex form.
-//     return hash.digest('hex');
-// };
-
-function sendReq(emailIn){
-var hashedEmail = cryptoHash(emailIn.toLowerCase());
-
+//Send friend request to the friend.
+function sendReq(hashedEmail){
 console.log("hashed email"+hashedEmail);
 
 var friendUid;
@@ -62,9 +40,8 @@ var friendUid;
                         friendRef.child("friends").child(userId).child("status").set("Received");
         
                         window.alert("Friend request sent.");
-        
-                        var email = $("#emailEnter");
-                        email.set("");
+
+                        window.location.href="loggedIn.html"
         
                     }
                  }
