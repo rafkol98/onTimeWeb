@@ -20,7 +20,56 @@
      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+     <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.3.0/firebase-app.js"></script>
+     
+     <!-- TODO: Add SDKs for Firebase products that you want to use
+          https://firebase.google.com/docs/web/setup#available-libraries -->
+     <!-- Add Firebase products that you want to use -->
+     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+     
+     <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
  
+ 
+     
+         
+         <script>
+             // Your web app's Firebase configuration
+             var firebaseConfig = {
+                 apiKey: "AIzaSyCobqUead56jUglV9AL5g1EL5zimAl1VDM",
+                 authDomain: "ontime-cfbf2.firebaseapp.com",
+                 databaseURL: "https://ontime-cfbf2.firebaseio.com",
+                 projectId: "ontime-cfbf2",
+                 storageBucket: "ontime-cfbf2.appspot.com",
+                 messagingSenderId: "895446317584",
+                 appId: "1:895446317584:web:8ee0c944cade7b7406a895"
+             };
+             // Initialize Firebase
+             firebase.initializeApp(firebaseConfig);
+            
+           </script>
+
+
+     <script>
+      firebase.auth().onAuthStateChanged(function (user)
+      {
+
+        if(user){
+          $("#nav_signOut").one("click", function(e) {
+            firebase.auth().signOut().then(function() {
+            console.log('Signed Out');
+          }, function(error) {
+            console.error('Sign Out Error', error);
+          });
+
+        });
+        }
+
+      }
+      );
+    </script>
   </head>
   <body>
       <!--Navigation Menu-->
@@ -31,8 +80,15 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html" id="nav_signOut">Sign Out <span class="sr-only">(current)</span></a>
+                </li>
+              
+                
+            </div>
           </nav>
-
     </section>
 
     
@@ -43,7 +99,7 @@
         <div class="row">
        
         <div class="col-md-12">
-            <h2>Welcome back</h2>
+            <h2>WELCOME BACK</h2>
             <p>From here you can see your upcoming walks, add a new friend and plan a meeting with a friend.</p>
         </div>
         
