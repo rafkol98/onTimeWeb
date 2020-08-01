@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-    <title>Add a Friend - justWalk</title>
+    <title>Your Friends - justWalk</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
    
 
@@ -45,7 +45,7 @@
 
 
           
-<script src="js/addFriend.js"></script>
+<script src="js/yourFriends.js"></script>
 
 <!-- <script type="text/javascript" src="path-to/bower_components/crypto-js/crypto-js.js"></script> -->
 
@@ -83,27 +83,28 @@
 
     <section>
         <div class="container">
-        <div class="gap"></div>
+        <div class="gapp"></div>
         <div class="row">
        
 
         
 
         <div class="col-md-6 col-md-pull-6 text-center order-sm-6" >
-            <span class="login_t"> <img src="images/addFriend@2x.png" class="img-fluid"> 
+            <span class="yourFriends_t"> <img src="images/yourFriends@2x.png" class="img-fluid"> 
             </span>
         </div>
 
              
         <div class="col-md-6 col-md-push-6 order-sm-1" >
-            <div class="gap"></div>
-            <h2>ADD A FRIEND</h2>
-            <p>Please tell us the email of your friend and we will send him a request!</p>
+
+            <h2>YOUR FRIENDS</h2>
+            <p>These are all of your justWalk friends, why dont you plan a meeting with them?</p>
     
             <div class="container">
-                <input id="emailEnter"   type="text" placeholder="Enter Email" name="uname" required>
-              </div>
-              <button id="btn-sendRequest" type="submit" onclick="">Send Request</button>
+              <p>
+                <ol id="tripsList"></ol>
+            </p>
+            
             </div>
 
            

@@ -31,7 +31,7 @@
       var userId = user.uid
       var ref = database.ref('/profiles/'+userId+"/trips");
 
-      ref.on('value', gotData, errData);
+      ref.once('value', gotData, errData);
 
       function gotData(data){
       // console.log(data.val());
