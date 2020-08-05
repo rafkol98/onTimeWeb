@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-    <title>Manage - justWalk</title>
+    <title>Friends - justWalk</title>
     
     <script src="https://gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
     <script src="https://gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
@@ -93,40 +93,57 @@
 
     
 
-    <section id="loggedin_banner">
+    <section id="friends_banner">
         <div class="container">
-        <div class="gap"></div>
-        <div class="row">
-          <div class="gap"></div>
-        <div class="col-md-12">
-            <h2>WELCOME BACK</h2>
-            <p class="wid50">From here you can see your upcoming walks, add a new friend and plan a meeting with a friend.</p>
-        </div>
-        
-
-        <div class="col-md-6 col-md-pull-6 text-center order-sm-6" >
-            <span class="logged_t"> <img src="images/loggedpic@2x.png" class="img-fluid"> 
-            </span>
-        </div>
-
-             
-        
-        <div class="col-md-6 col-md-push-6 order-sm-1" >
-          
+            <div class="gap"></div>
             
-            
-            <button type="button" class="btnN btn-new" id="upwalk">Upcoming Walks</button>
-            <button type="button" class="btnN btn-new" id="planMeetingid">Plan a Meeting</button>
-            <button type="button" class="btnN btn-new" id="planMeetingid">Meeting Requests</button>
-            <button type="button" class="btnN btn-new" id="addFriendid">Add a Friend</button>
-            <button type="button" class="btnN btn-new" id="yourFriendsid">Friend Requests</button>
-            <button type="button" class="btnN btn-new" id="yourFriendsid">Your Friends</button>
-          
+      
+        
+            <div class="row">
+
+                <div class="col-md-12">
+                    <h2>FRIENDS</h2>
+                    <p class="wid50">From here you can add a new friend, manage your friend requests and see all of your current friends.</p>
+                </div>
+           
+           
+            <div class="col-md-4 col-md-pull-4 text-center order-sm-1" id="addFriendBox">
+                <div class="card text-center cardPadding"  id="pool1">
+                      
+                    <img src="./images/addFriend_box@2x.png" class="img-fluid imgPadding">
+                    <h3>Add a Friend…</h3>
+                       
+                </div>
+            </div>
+     
        
-        </div>
-        
-        </div>
-        </div>
+            
+      
+            
+            <div class="col-md-4 col-md-pull-4 text-center order-sm-4" id="requestBox">
+              <div class="card text-center cardPadding" id="pool2">
+               
+                  <img src="./images/friendRequest_box@2x.png" class="img-fluid imgPadding">
+                  <h3>Friend Requests...</h3>
+            
+              </div>
+            </div>
+           
+      
+            
+            <div class="col-md-4 col-md-pull-4 text-center order-sm-6" id="yourFriendsBox">
+              <div class="card text-center cardPadding"  id="pool3">
+                
+                  <img src="./images/yourFriends_box@2x.png" class="img-fluid imgPadding">
+                  <h3>Your Friends...</h3>
+                 
+              </div>
+            </div>
+           
+         
+            
+            </div>
+            </div>
     </section>
 
 
@@ -134,16 +151,13 @@
 
 
     <script>
-    document.getElementById("upwalk").onclick = function () {
-    location.href = "planned.html";};
-
-    document.getElementById("planMeetingid").onclick = function () {
-    location.href = "planMeeting.html";};
-
-    document.getElementById("addFriendid").onclick = function () {
+    document.getElementById("addFriendBox").onclick = function () {
     location.href = "addFriend.html";};
 
-    document.getElementById("yourFriendsid").onclick = function () {
+    document.getElementById("requestBox").onclick = function () {
+    location.href = "loggedIn";};
+
+    document.getElementById("yourFriendsBox").onclick = function () {
     location.href = "yourFriends.html";};
 
     </script>
