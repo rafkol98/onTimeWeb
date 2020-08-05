@@ -11,61 +11,52 @@ firebase.auth().onAuthStateChanged(function (user)
 
     function gotData(data){
     // console.log(data.val());
-    var trips = data.val();
-    var keys = Object.keys(trips);
+    var friends = data.val();
+    var keys = Object.keys(friends);
     console.log("here friends" + keys);
 
     for (var i=0; i < keys.length; i ++){
         var k = keys[i];
-        var status = trips[k].status;
+        var status = friends[k].status;
 
         console.log("status of "+i+status);
 
         if(status=="Friends"){
-            var email = trips[k].email;
+            var email = friends[k].email;
 
-            console.log(k+" pou mesa")
-
-
-            var timestamp = trips[k].timestamp;
+            var timestamp = friends[k].timestamp;
             
             var date = convertLong(timestamp);
 
-        // Create cards. 
+            localStorage.setItem("friend"+i, k);
+            // Create cards. 
             var myDiv = document.createElement("div");
-            var keyOfCurrentTrip = localStorage.getItem("trip"+i);
+            var keyOfCurrentFriend = localStorage.getItem("friend"+i);
 
+   
             // Create cards. 
             var myDiv = document.createElement("div");
 
-            var keyOfCurrentTrip = localStorage.getItem("trip"+i);
-
+            if(document.getElementById("listFriends")){
+              var option = document.createElement("option");
+              option.value = email;
+              option.text = email;
+              document.getElementById("listFriends").appendChild(option);
+            }
+          
             myDiv.innerHTML = "<div class=\"card-body\">"+ 
             "<h5 class=\"card-title friendsCard\">"+email+"</h5>"+
-            "<a href='javascript:smallLink("+keyOfCurrentTrip+","+i+")' class=\"card-link\">Plan a Meeting</a>"
-            + "<a href='javascript:deleteTrip("+keyOfCurrentTrip+")' class=\"card-link\">Delete Friend</a>"
+            "<a href='javascript:smallLink("+keyOfCurrentFriend+","+i+")' class=\"card-link\">Plan a Meeting</a>"
+            + "<a href='javascript:deleteFriend("+i+")' class=\"card-link redLink\">Delete Friend</a>"
 
             +"</div>"+"</div>" 
 
-        
-            document.getElementById("tripsList").appendChild(myDiv);
+            if(document.getElementById("tripsList")){
+              document.getElementById("tripsList").appendChild(myDiv);
+            }
+            
   
         }
-        
-
-
-
-
-
-        myDiv.innerHTML = "<div class=\"card-body\">"+ 
-        "<h5 class=\"card-title\">"+destination+"</h5>"+"<p class=\"card-text\">"+date+"</p>"+
-        "<a href='javascript:smallLink("+keyOfCurrentTrip+","+i+")' class=\"card-link\">Edit Trip</a>"
-        + "<a href='javascript:deleteTrip("+keyOfCurrentTrip+")' class=\"card-link\">Delete Trip</a>"
-
-        +"</div>"+"</div>" 
-
-       
-        document.getElementById("tripsList").appendChild(myDiv);
     }
     }
 
@@ -78,6 +69,23 @@ firebase.auth().onAuthStateChanged(function (user)
       var date = new Date(long);
       return date;
     }
+    
   }
 }
 );
+
+function deleteFriend(i){
+  firebase.auth().onAuthStateChanged(function (user)
+{
+ 
+  if(user){
+  var keyOfCurrentFriend = localStorage.getItem("friend"+i);
+
+  var database = firebase.database();
+  var userId = user.uid
+  var ref = database.ref('/friendRequests/'+userId+"/friends/"+keyOfCurrentFriend);
+  var refFriend = database.ref('/friendRequests/'+keyOfCurrentFriend+"/friends/"+userId);
+
+  ref.remove();
+  refFriend.remove();
+}}); window.location = window.location}

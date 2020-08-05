@@ -58,7 +58,7 @@
           myDiv.innerHTML = "<div class=\"card-body\">"+ 
           "<h5 class=\"card-title\">"+destination+"</h5>"+"<p class=\"card-text\">"+date+"</p>"+
           "<a href='javascript:smallLink("+keyOfCurrentTrip+","+i+")' class=\"card-link\">Edit Trip</a>"
-          + "<a href='javascript:deleteTrip("+keyOfCurrentTrip+")' class=\"card-link\">Delete Trip</a>"
+          + "<a href='javascript:deleteTrip("+keyOfCurrentTrip+")' class=\"card-link redLink\">Delete Trip</a>"
 
           +"</div>"+"</div>" 
 
