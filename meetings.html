@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
-    <title>Friends - justWalk</title>
+    <title>Meetings - justWalk</title>
     
     <script src="https://gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
     <script src="https://gstatic.com/firebasejs/6.3.1/firebase-auth.js"></script>
@@ -93,7 +93,7 @@
 
     
 
-    <section id="friends_banner">
+    <section id="meetings_banner">
         <div class="container">
             <div class="gap"></div>
             
@@ -102,16 +102,16 @@
             <div class="row">
 
                 <div class="col-md-12">
-                    <h2>FRIENDS</h2>
-                    <p class="wid50">From here you can add a new friend, manage your friend requests and see all of your current friends.</p>
+                    <h2 class="gapp">MEETINGS</h2>
+                    <p class="wid50">From here you can plan a meeting with your friends and manage any meeting requests you received.</p>
                 </div>
            
            
-            <div class="col-md-4 col-md-pull-4 text-center order-sm-1" id="addFriendBox">
-                <div class="card text-center cardPadding"  id="pool1">
+            <div class="col-md-6 col-md-pull-6 text-center order-sm-1" id="planMeetingBox">
+                <div class="card text-center cardPaddingMeet">
                       
-                    <img src="./images/addFriend_box@2x.png" class="img-fluid imgPadding">
-                    <h3>Add a Friend…</h3>
+                    <img src="./images/planMeeting_box@2x.png" class="img-fluid imgPaddingMeet not">
+                    <h3>Plan a Meeting...</h3>
                        
                 </div>
             </div>
@@ -120,27 +120,14 @@
             
       
             
-            <div class="col-md-4 col-md-pull-4 text-center order-sm-4" id="requestBox">
-              <div class="card text-center cardPadding" id="pool2">
-               
-                  <img src="./images/friendRequest_box@2x.png" class="img-fluid imgPadding">
-                  <h3>Friend Requests...</h3>
-            
-              </div>
+            <div class="col-md-6 col-md-pull-6 text-center order-sm-4" id="addFriendBox">
+                <div class="card text-center cardPaddingMeet not">
+                      
+                    <img src="./images/meetingRequests_box@2x.png" class="img-fluid imgPaddingMeet">
+                    <h3>Meeting Requests...</h3>
+                       
+                </div>
             </div>
-           
-      
-            
-            <div class="col-md-4 col-md-pull-4 text-center order-sm-6" id="yourFriendsBox">
-              <div class="card text-center cardPadding"  id="pool3">
-                
-                  <img src="./images/yourFriends_box@2x.png" class="img-fluid imgPadding">
-                  <h3>Your Friends...</h3>
-                 
-              </div>
-            </div>
-           
-         
             
             </div>
             </div>
@@ -151,11 +138,11 @@
 
 
     <script>
-    document.getElementById("addFriendBox").onclick = function () {
-    location.href = "addFriend.html";};
+    document.getElementById("planMeetingBox").onclick = function () {
+    location.href = "planMeeting.html";};
 
     document.getElementById("requestBox").onclick = function () {
-    location.href = "friendRequests.html";};
+    location.href = "loggedIn";};
 
     document.getElementById("yourFriendsBox").onclick = function () {
     location.href = "yourFriends.html";};

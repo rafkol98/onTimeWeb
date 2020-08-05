@@ -304,7 +304,7 @@ color: black;
 .btnN{
     border: 1px solid #E6E6E6;
     background: none;
-    /* padding: 20px 10px; */
+    padding: 20px 10px;
     width: 96%;
     font-size: 22px;
     cursor: pointer;
@@ -314,6 +314,29 @@ color: black;
     overflow: hidden;
     box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
   }
+
+
+  .btnN2{
+    border: 1px solid #E6E6E6;
+    background: none;
+
+    width: 96%;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .btnN2:hover{
+    background-color: #F41E1E;
+    border: 1px solid rgb(222, 27, 27);
+  }
+
+
+
   .btn-new{
     color: black;
   }
@@ -611,7 +634,7 @@ color: black !important;
   }
 
 .card {
-    margin: 50px;
+    margin: 20px;
     height: 400px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2) !important;
     transition: 1s;
@@ -631,11 +654,27 @@ color: black !important;
     cursor: pointer;
 }
 
+.cardPaddingMeet{
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 20px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+
 .imgPadding{
     width: 100%;
     margin: auto;
     max-width: 200px;
     max-height: 150px;
+}
+
+.imgPaddingMeet{
+    width: 100%;
+    margin: auto;
+    max-width: 500px;
+    max-height: 350px;
 }
 
 /* Friends section */
@@ -644,4 +683,20 @@ color: black !important;
     background-repeat: no-repeat;
     color: black;
     padding-bottom: 5%;
+}
+
+#meetings_banner {
+    background-image: url("./images/waveMeetAlt.svg");
+    background-repeat: no-repeat;
+    color: black;
+    padding-bottom: 5%;
+}
+
+.not img{
+    margin-top: 20px !important;
+    
+}
+
+.imgReq {
+    width: 50% !important;
 }
