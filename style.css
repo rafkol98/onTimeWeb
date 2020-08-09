@@ -600,6 +600,15 @@ color: black !important;
     margin-bottom: 15%;
 }
 
+
+.meetings_t img{
+    /* padding-top: 5%; */
+    /* margin-top: 15%; */
+    margin-left: 20%;
+    width: 100%;
+    margin-bottom: 15%;
+}
+
 .friendsCard{
     font-size: 30px;
     padding-top: 10px;
